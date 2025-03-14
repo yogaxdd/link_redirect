@@ -1,81 +1,52 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YogaxD Redirect Link CBT</title>
-  <style>
-    /* Style body dengan background gradasi dan center alignment */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #fff;
-    }
-    /* Container untuk mengatur layout */
-    .container {
-      text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    /* Styling untuk input field */
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    /* Styling untuk button */
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #ff5722;
-      color: #fff;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #e64a19;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>YogaxD Redirect Link CBT</h1>
-    <!-- Tempat untuk memasukkan link -->
-    <input type="text" id="linkInput" placeholder="Masukkan link di sini">
-    <br>
-    <button id="goButton">Meluncur</button>
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YogaxD Mod CBT - Link Launcher</title>
+    <meta name="description" content="Luncurkan tautan dengan cepat dan mudah" />
+    <meta name="author" content="YogaxD" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
 
-  <script>
-    // Fungsi untuk mengarahkan ke link yang telah diinput
-    document.getElementById("goButton").addEventListener("click", function() {
-      var url = document.getElementById("linkInput").value.trim();
-      if (url) {
-        // Jika url tidak diawali dengan http:// atau https://, tambahkan secara default
-        if (!/^https?:\/\//i.test(url)) {
-          url = "http://" + url;
-        }
-        window.location.href = url;
-      } else {
-        alert("Silahkan masukkan link terlebih dahulu!");
-      }
-    });
-  </script>
-</body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">YogaxD Redirect</h1>
+        <p class="subtitle">Ingat! Resiko Ditanggung Sendiri Ya >.<</p>
+      </header>
+      
+      <div class="link-launcher">
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="url-input" 
+            placeholder="Masukkan URL tujuan..." 
+            class="url-input"
+          />
+        </div>
+        <button id="launch-button" class="launch-button">
+          Meluncur
+          <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="footer">
+        <p>© <span id="current-year"></span> YogaxD Redirect. Semua hak dilindungi.</p>
+      </div>
+    </div>
+    
+    <div id="toast" class="toast">
+      <div id="toast-message" class="toast-message"></div>
+    </div>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
 </html>
