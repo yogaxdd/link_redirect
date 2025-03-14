@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YogaxD Redirect Link CBT</title>
+  <style>
+    /* Style body dengan background gradasi dan center alignment */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+    /* Container untuk mengatur layout */
+    .container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    /* Styling untuk input field */
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    /* Styling untuk button */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ff5722;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e64a19;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YogaxD Redirect Link CBT</h1>
+    <!-- Tempat untuk memasukkan link -->
+    <input type="text" id="linkInput" placeholder="Masukkan link di sini">
+    <br>
+    <button id="goButton">Meluncur</button>
+  </div>
+
+  <script>
+    // Fungsi untuk mengarahkan ke link yang telah diinput
+    document.getElementById("goButton").addEventListener("click", function() {
+      var url = document.getElementById("linkInput").value.trim();
+      if (url) {
+        // Jika url tidak diawali dengan http:// atau https://, tambahkan secara default
+        if (!/^https?:\/\//i.test(url)) {
+          url = "http://" + url;
+        }
+        window.location.href = url;
+      } else {
+        alert("Silahkan masukkan link terlebih dahulu!");
+      }
+    });
+  </script>
+</body>
+</html>
